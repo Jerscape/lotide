@@ -11,30 +11,38 @@ const assertEqual = function(actual, expected) {
 
 //countLetters function
 
-const countLetters = function(sentence){
-  let lettersCount = {}
+//figure out how to assess each letter and to confirm if it has or has not been counted so far 
+//JN for the above I think the approach in the outer if statemne tin countOnly would work
+//if it has not, you will need to add a new key/value pair
+//if is has, you will need to add it to the exist key/value pair, which should be possible using bracket notation
 
-  //build for loop
-  //figure out how to assess each letter and to confirm if it has or has not been counted so far 
-  //JN for the above I think the approach in the outer if statemne tin countOnly would work
-  //if it has not, you will need to add a new key/value pair
-  //if is has, you will need to add it to the exist key/value pair, which should be possible using bracket notation
-  //you have to account for blanks somehow....either count them but don't add them orfilter them out (refer back to Katas you did this somewhere)
+const countLetters = function(sentence) {
+  let lettersCount = {};
+  sentence = sentence.toLowerCase()
 
-  for(const elem of countLetters){
+  for (const elem of sentence) {
 
-    //assess if already in the object
-    if(countLetters[elem] !== lettersCount[elem]){  //this is not going to work because it is not an object, it is a string...add to an array to compare against?
-      //could just compare against return object? 
-    }
+    //screen out blanks
+    if (elem !== " ") {
+      //assess if already in the object
+      //could just compare against return object?
+      if (sentence[elem] !== lettersCount[elem]) {
+        
+        lettersCount[elem] = 1;
+  
+      } else {
+        //add to existing
+        // don't forget to count
+        lettersCount[elem] += 1;
+        
+      }
 
-    else{
-      //add to existing 
-      // don't forget to count
     }
 
   }
+  return lettersCount;
 
-}
+};
 
 //put in tests here
+console.log(countLetters("My name is Jeremy"));
