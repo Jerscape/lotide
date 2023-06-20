@@ -1,4 +1,11 @@
+//the instructions were to paste this in to test or result, but..
+//I confirmed with a mentor that this wil not work,
+//as you cannot compare the content of objects this way
+// this will only compare their referential equality
+
+/*
 const assertEqual = function(actual, expected) {
+  //need to update to handle objects 
   let message = "";
   if (actual === expected) {
     message = `Assertion Passed: ${actual} === ${expected}`;
@@ -7,7 +14,7 @@ const assertEqual = function(actual, expected) {
   }
 
   console.log(message);
-};
+}; */
 
 //countLetters function
 
@@ -18,15 +25,14 @@ const assertEqual = function(actual, expected) {
 
 const countLetters = function(sentence) {
   let lettersCount = {};
-  sentence = sentence.toLowerCase()
+  sentence = sentence.toLowerCase();
 
   for (const elem of sentence) {
 
     //screen out blanks
     if (elem !== " ") {
       //assess if already in the object
-      //could just compare against return object?
-      if (sentence[elem] !== lettersCount[elem]) {
+      if (!lettersCount[elem]) {
         
         lettersCount[elem] = 1;
   
@@ -45,4 +51,10 @@ const countLetters = function(sentence) {
 };
 
 //put in tests here
-console.log(countLetters("My name is Jeremy"));
+//confirmed with a mentor that assertEqual will not accurate compare objects
+//he said to build an assertObjectEqual function. That is further down the list.
+//after you build it, come back and test
+console.log(countLetters("My yellow beetle"));
+let result = countLetters("My yellow beetle");
+//assertEqual(result, { m: 1, y: 2, e: 4, l: 3, o: 1, w: 1, b: 1, t: 1 });
+//console.log(countLetters("My name is Jeremy")); 
