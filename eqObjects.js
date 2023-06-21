@@ -35,8 +35,15 @@ function assertArraysEqual(array1, array2) {
 
 const eqObjects = function(object1, object2){
   let result = ""
+  let object1Keys = Object.keys(object1)
+  let Object2Keys = Object.keys(object2) 
+  console.log(object1Keys)
+ 
+  //don't forget to test for length
 
-  let Object1Array = []
+
+
+  /*let Object1Array = []
   let Object2Array = []
 
   for(let item in object1){
@@ -48,6 +55,7 @@ const eqObjects = function(object1, object2){
     let kValue2 = object1[item]
     object2.push([item, kValue2])//push array of key value pair onto array
   }
+*/
 
 
 
