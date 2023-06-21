@@ -14,7 +14,27 @@ const assertEqual = function(actual, expected) {
 //eqObject
 
 const eqObjects = function(object1, object2){
-  
+  let result = ""
+
+
+/*
+  for(let item in object1){
+    let kValue1 = object1[item]
+    for(item in object2) {
+      let kValue2
+
+      let keyEqual = assertEqual(object1[item], item)
+      let valueEqual 
+
+      if(){
+
+      }
+
+    }
+
+  }*/
+
+
 }
 
 
