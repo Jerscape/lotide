@@ -13,25 +13,24 @@ const assertEqual = function(actual, expected) {
 
 //ARRAY TEST FUNCTION
 
-function assertArraysEqual(array1, array2) {
-  let result = "";
-  //judge length and if length is the same test each element against each element
+function eqArrays(array1, array2) {
+
+  //judge length
+  //if length is the same test each element against each element
   if (array1.length === array2.length) {
     for (let i = 0; i < array1.length; i++) {
       //assess if any of the values DO NOT match, if so return false immediately
       if (array1[i] !== array2[i]) {
-        result = false;
-      } else {
-        result = true;
+        return false;
       }
     }
 
   } else {
     //returns false if the array lengths do not match
-    result = false;
+    return false;
   }
-  
-  console.log(result);
+
+  return true;
 }
 
 
@@ -45,11 +44,14 @@ const eqObjects = function(object1, object2) {
   //let object2ValuesArr = Object.values(object2)
 
   //test key array length
+
+  //suggestion from mentor, refactor with guard clauses 
   if(object1KeysArr.length === object2KeysArr.length) {
 
     //if the length matches, compare keys?
     for(let elem of object1KeysArr){
-      if(object1KeysArr[elem] === object2KeysArr[elem]){
+
+      if(object2KeysArr.includes(elem)){
         //I don't think the following line is correctly accessing the values
         //object1[elem] !==  object2[elem]
         let keyValue1 = object1[elem];
@@ -58,19 +60,18 @@ const eqObjects = function(object1, object2) {
         //assess if both key values are arrays, if so evaluate against eachother using assertArraysEqual function
         if(Array.isArray(keyValue1) && Array.isArray(keyValue2)){
           
-          let arrayTF = assertArraysEqual(keyValue1, keyValue2)
+          const match = eqArrays(keyValue1, keyValue2)
 
-          if(arrayTF !== true ){
-            //return false?
+          if(!match ){
+            return false 
           }
 
         }
 
-        //if not an array, asses as primitive
-        //if(object1["elem"] != object2["elem"])
+
         else if(keyValue1 !==  keyValue2) {
 
-          //return false if not a match
+         
           return false 
         } 
 
@@ -80,8 +81,7 @@ const eqObjects = function(object1, object2) {
         //if keys don't match
         return false
       }
-      //is this correct?
-      //return true
+
        
     }
 
@@ -105,11 +105,11 @@ let testingObject4 = {name: "Jeeves", age: "30"}
 //eqObjects(testingObject1, testingObject3)
 
 //arrays test
-const multicolourShirtObject = {colors: ["red", "blue"], size: "medium"}
+const multicolourShirtObject = {colours: ["red", "blue"], size: "medium"}
 const anotherMultiColourShirtObject = {size: "medium", colours: ["red", "blue"]}
 
 console.log(eqObjects(multicolourShirtObject, anotherMultiColourShirtObject))
 const longSleeveMultiColourShiftObject = {size: "medium", colours: ["red", "blue"] , sleeveLength: "long"}
 console.log(eqObjects(multicolourShirtObject, longSleeveMultiColourShiftObject))
-console.log(eqObjects)
+
 
