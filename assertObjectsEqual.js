@@ -31,17 +31,13 @@ function eqArrays(array1, array2) {
   return true;
 }
 
-
 //EQOBJECTS FUNCTION
 
 const eqObjects = function(object1, object2) {
+  const inspect = require("util").inspect; //imports util libraries inspect function (as per the instructions)
 
   let object1KeysArr = Object.keys(object1)
   let object2KeysArr = Object.keys(object2)
-  //let object1ValuesArr = Object.values(object1)
-  //let object2ValuesArr = Object.values(object2)
-
-  //test key array length
 
   //suggestion from mentor, refactor with guard clauses 
   if(object1KeysArr.length === object2KeysArr.length) {
@@ -61,34 +57,30 @@ const eqObjects = function(object1, object2) {
           const match = eqArrays(keyValue1, keyValue2)
 
           if(!match ){
-            return false 
+            console.log("false") 
           }
 
         }
 
-
-        else if(keyValue1 !==  keyValue2) {
-
-         
-          return false 
-        } 
+       else if(keyValue1 !==  keyValue2) {
+         console.log("false")
+       } 
 
       }
 
       else {
         //if keys don't match
-        return false
+        console.log("false")
       }
-
        
     }
 
-  } else {
-    //return false immediately if the length of each objects keys array doesn't match
-    return false 
-  } //end length if 
+    } else {
+     //return false immediately if the length of each objects keys array doesn't match
+     console.log("false")
+    } //end length if 
 
-  return true 
+    console.log("true")
   } // end function
 
 //testing
