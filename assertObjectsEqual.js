@@ -35,53 +35,54 @@ function eqArrays(array1, array2) {
 
 const eqObjects = function(object1, object2) {
   const inspect = require("util").inspect; //imports util libraries inspect function (as per the instructions)
+  let result = "";
+  let object1KeysArr = Object.keys(object1);
+  let object2KeysArr = Object.keys(object2);
 
-  let object1KeysArr = Object.keys(object1)
-  let object2KeysArr = Object.keys(object2)
-
-  //suggestion from mentor, refactor with guard clauses 
-  if(object1KeysArr.length === object2KeysArr.length) {
+  //suggestion from mentor, refactor with guard clauses
+  if (object1KeysArr.length === object2KeysArr.length) {
 
     //if the length matches, compare keys?
-    for(let elem of object1KeysArr){
+    for (let elem of object1KeysArr) {
 
-      if(object2KeysArr.includes(elem)){
+      if (object2KeysArr.includes(elem)) {
         //I don't think the following line is correctly accessing the values
         //object1[elem] !==  object2[elem]
         let keyValue1 = object1[elem];
-        let keyValue2= object2[elem];
+        let keyValue2 = object2[elem];
 
         //assess if both key values are arrays, if so evaluate against eachother using assertArraysEqual function
-        if(Array.isArray(keyValue1) && Array.isArray(keyValue2)){
+        if (Array.isArray(keyValue1) && Array.isArray(keyValue2)) {
           
-          const match = eqArrays(keyValue1, keyValue2)
+          const match = eqArrays(keyValue1, keyValue2);
 
-          if(!match ){
-            console.log("false") 
+          if (!match) {
+            result = false;
           }
 
+        } else if (keyValue1 !==  keyValue2) {
+          result = false;
         }
 
-       else if(keyValue1 !==  keyValue2) {
-         console.log("false")
-       } 
-
-      }
-
-      else {
+      } else {
         //if keys don't match
-        console.log("false")
+        result = false;
       }
        
     }
 
-    } else {
-     //return false immediately if the length of each objects keys array doesn't match
-     console.log("false")
-    } //end length if 
+  } else {
+    //return false immediately if the length of each objects keys array doesn't match
+    result = false;
+  } //end length if
 
-    console.log("true")
-  } // end function
+  if (result !== false) {
+    result = true;
+  }
+
+  console.log(result);
+
+}; // end function
 
 //testing
 
@@ -95,13 +96,21 @@ let testingObject4 = {name: "Jeeves", age: "30"}
 //eqObjects(testingObject1, testingObject2)
 //eqObjects(testingObject1, testingObject3)
 
-//arrays test
-const multicolourShirtObject = {colours: ["red", "blue"], size: "medium"}
-const anotherMultiColourShirtObject = {size: "medium", colours: ["red", "blue"]}
-
-console.log(eqObjects(multicolourShirtObject, anotherMultiColourShirtObject))
-const longSleeveMultiColourShiftObject = {size: "medium", colours: ["red", "blue"] , sleeveLength: "long"}
-console.log(eqObjects(multicolourShirtObject, longSleeveMultiColourShiftObject))
-
-
 */
+
+//arrays test
+const multicolourShirtObject = {colours: ["red", "blue"], size: "medium"};
+const anotherMultiColourShirtObject = {size: "medium", colours: ["red", "blue"]};
+
+//it is console logging undefined because it hasn'returned anything. The first true in the console is the result of the eqObects function call below
+//console.log("test 1 " + eqObjects(multicolourShirtObject, anotherMultiColourShirtObject))
+console.log("test 1");
+eqObjects(multicolourShirtObject, anotherMultiColourShirtObject);
+const longSleeveMultiColourShiftObject = {size: "medium", colours: ["red", "blue"] , sleeveLength: "long"};
+
+//console.log("test 2 " + eqObjects(multicolourShirtObject, longSleeveMultiColourShiftObject))
+console.log("test 2");
+eqObjects(multicolourShirtObject, longSleeveMultiColourShiftObject);
+
+//there is a 3rd true statement coming from somewhere, it must be this above call (erronouse)
+
