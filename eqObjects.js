@@ -11,24 +11,29 @@ const eqObjects = function(object1, object2) {
   //test key array length
   if(object1KeysArr.length === object2KeysArr.length) {
     //if the length matches, compare keys?
-    for(let i = 0; i < object1KeysArr.length; i++){
+    for(let elem of object1KeysArr){
+      if(object1KeysArr[elem] === object2KeysArr[elem]){
+        //I don't think the following line is correctly accessing the values
+        //object1[elem] !==  object2[elem]
+        let keyValue1 = object1[elem];
+        let keyValue2= object2[elem];
 
-      if(object1KeysArr[i] === object2KeysArr[i]){
-        //even key matches, then assess value
-        //object1KeysArr[i] etc should evaluate to the key name in object 1...which should then pull the value right?
-        if(object1[object1KeysArr[i]] !== object2[object2KeysArr[i]] ) {
-          //if any value doesnt' match return false
+        //if(object1["elem"] != object2["elem"])
+        if(keyValue1 !==  keyValue2) {
+
+          //return false if not a match
           return false 
+        } 
 
-        } else{
-          //if each key, and each value match
-          return true
-        }
 
-      } else {
-        //if keys do not match reutrn fasle
+      }
+
+      else{
+        //if keys don't match
         return false
       }
+      //is this correct?
+      //return true
        
     }
 
@@ -37,15 +42,17 @@ const eqObjects = function(object1, object2) {
     return false 
   } //end length if 
 
+  return true 
   } // end function
 
 //testing
 
 let testingObject1 = {name: "Juniper", age: "20", occupation: "Student"}
 let testingObject2 = {name: "Juniper", age: "20", occupation: "Student"}
-let testingObject3 = {name: "Jeeves", age: "30", occupation: "Mouse Chaser"}
+let testingObject3 = {name: "Juniper", age: "30", occupation: "Mouse Chaser"}
 let testingObject4 = {name: "Jeeves", age: "30"}
 
 
-eqObjects(testingObject1, testingObject2)
+//eqObjects(testingObject1, testingObject2)
+eqObjects(testingObject1, testingObject3)
 
