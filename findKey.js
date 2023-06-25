@@ -14,11 +14,11 @@ const assertEqual = function(actual, expected) {
 const findKey = function(object, callback) {
 
   for (let key in object) {
-    let target = object[key]
-    //console.log(target)
-    let outcome = callback(target)
-    if(outcome === true){
-      return key
+    let target = object[key];
+    
+    let outcome = callback(target);
+    if (outcome === true) {
+      return key;
     }
     
 
@@ -37,4 +37,4 @@ const bloop = findKey({
   "Ora":       { stars: 4 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 45); // => "noma"
-console.log(bloop)
+console.log(bloop);
