@@ -1,6 +1,6 @@
 const assert = require('chai').assert
 const middle = require('../middle')
-const assertArraysEqual = require('../assertArraysEqual')
+
 
 describe("#middle", () => {
   it("returns Pulp for ['Blur','Oasis', 'Pulp', 'Radiohead', 'James']", () => {
