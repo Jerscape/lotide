@@ -32,7 +32,7 @@ const assertEqual = function(actual, expected) {
 
 //testing object
 const testObject = {
-  sci_fi: "The Expanse",
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"};
 

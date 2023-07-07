@@ -13,7 +13,7 @@ const assertEqual = function(actual, expected) {
 
 //ARRAY TEST FUNCTION
 
-function eqArrays(array1, array2) {
+const eqArrays = function(array1, array2) {
 
   //judge length
   //if length is the same test each element against each element
@@ -31,55 +31,50 @@ function eqArrays(array1, array2) {
   }
 
   return true;
-}
+};
 
 
 //EQOBJECTS FUNCTION
 
 const eqObjects = function(object1, object2) {
 
-  let object1KeysArr = Object.keys(object1)
-  let object2KeysArr = Object.keys(object2)
+  let object1KeysArr = Object.keys(object1);
+  let object2KeysArr = Object.keys(object2);
   //let object1ValuesArr = Object.values(object1)
   //let object2ValuesArr = Object.values(object2)
 
   //test key array length
 
-  //suggestion from mentor, refactor with guard clauses 
-  if(object1KeysArr.length === object2KeysArr.length) {
+  //suggestion from mentor, refactor with guard clauses
+  if (object1KeysArr.length === object2KeysArr.length) {
 
     //if the length matches, compare keys?
-    for(let elem of object1KeysArr){
+    for (let elem of object1KeysArr) {
 
-      if(object2KeysArr.includes(elem)){
+      if (object2KeysArr.includes(elem)) {
         //I don't think the following line is correctly accessing the values
         //object1[elem] !==  object2[elem]
         let keyValue1 = object1[elem];
-        let keyValue2= object2[elem];
+        let keyValue2 = object2[elem];
 
         //assess if both key values are arrays, if so evaluate against eachother using assertArraysEqual function
-        if(Array.isArray(keyValue1) && Array.isArray(keyValue2)){
+        if (Array.isArray(keyValue1) && Array.isArray(keyValue2)) {
           
-          const match = eqArrays(keyValue1, keyValue2)
+          const match = eqArrays(keyValue1, keyValue2);
 
-          if(!match ){
-            return false 
+          if (!match) {
+            return false;
           }
 
-        }
-
-
-        else if(keyValue1 !==  keyValue2) {
+        } else if (keyValue1 !==  keyValue2) {
 
          
-          return false 
-        } 
+          return false;
+        }
 
-      }
-
-      else {
+      } else {
         //if keys don't match
-        return false
+        return false;
       }
 
        
@@ -87,29 +82,25 @@ const eqObjects = function(object1, object2) {
 
   } else {
     //return false immediately if the length of each objects keys array doesn't match
-    return false 
-  } //end length if 
+    return false;
+  } //end length if
 
-  return true 
-  } // end function
+  return true;
+}; // end function
 
 //testing
 
-let testingObject1 = {name: "Juniper", age: "20", occupation: "Student"}
-let testingObject2 = {name: "Juniper", age: "20", occupation: "Student"}
-let testingObject3 = {name: "Juniper", age: "30", occupation: "Mouse Chaser"}
-let testingObject4 = {name: "Jeeves", age: "30"}
-
-
-//eqObjects(testingObject1, testingObject2)
-//eqObjects(testingObject1, testingObject3)
+let testingObject1 = {name: "Juniper", age: "20", occupation: "Student"};
+let testingObject2 = {name: "Juniper", age: "20", occupation: "Student"};
+let testingObject3 = {name: "Juniper", age: "30", occupation: "Mouse Chaser"};
+let testingObject4 = {name: "Jeeves", age: "30"};
 
 //arrays test
-const multicolourShirtObject = {colours: ["red", "blue"], size: "medium"}
-const anotherMultiColourShirtObject = {size: "medium", colours: ["red", "blue"]}
+const multicolourShirtObject = {colours: ["red", "blue"], size: "medium"};
+const anotherMultiColourShirtObject = {size: "medium", colours: ["red", "blue"]};
 
-console.log(eqObjects(multicolourShirtObject, anotherMultiColourShirtObject))
-const longSleeveMultiColourShiftObject = {size: "medium", colours: ["red", "blue"] , sleeveLength: "long"}
-console.log(eqObjects(multicolourShirtObject, longSleeveMultiColourShiftObject))
+console.log(eqObjects(multicolourShirtObject, anotherMultiColourShirtObject));
+const longSleeveMultiColourShiftObject = {size: "medium", colours: ["red", "blue"] , sleeveLength: "long"};
+console.log(eqObjects(multicolourShirtObject, longSleeveMultiColourShiftObject));
 
 

@@ -1,7 +1,7 @@
 //use Array.isArray() to compare arrays
 
 //eqArrays
-function eqArrays(array1, array2) {
+const eqArrays = function(array1, array2) {
 
   //judge length
   //if length is the same test each element against each element
