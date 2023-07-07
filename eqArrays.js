@@ -13,7 +13,8 @@ const assertEqual = function(actual, expected) {
   console.log(message);
 };*/
 
-function eqArrays(array1, array2) {
+
+let eqArrays = function(array1, array2) {
 
   //judge length
   //if length is the same test each element against each element
@@ -31,7 +32,7 @@ function eqArrays(array1, array2) {
   }
 
   return true;
-}
+};
 
-module.exports = eqArrays
+module.exports = eqArrays;
 
