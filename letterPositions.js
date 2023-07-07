@@ -42,7 +42,7 @@ const assertArraysEqual = function(array1, array2) {
   }
   
   console.log(result);
-}
+};
 
 //console.log(letterPositions("hello jello"));
 //console.log(letterPositions("hello"));
