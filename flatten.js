@@ -51,7 +51,7 @@ const flatten = function(arrayToFlatten) {
   
   }
   return result;
-}
+};
 
 //console.log(flatten([1, 2, [3, 4], 5, [6]])); //this one works,
 //console.log(flatten([[1, 3, 5], [7, 9, 11]])); //only returning numbers from teh first array
