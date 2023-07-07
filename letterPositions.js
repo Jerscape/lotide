@@ -18,33 +18,12 @@ const letterPositions = function(sentence) {
 
   }
 
-  /*let count = 0
-  
-for(const item in sentence){
-  if(sentence[item] !== " "){
-
-    // item (letter) is not already a key in results object, add it
-    if(!results[item] ){
-      //results[item] = [count]
-      results[count] = [item]
-    } else {
-      //push index onto existing array matching the item
-      //results[item].push(count)
-      results[count] = [item]
-
-    }
-
-  }
-
-  count++
-}*/
-
   return results;
 
 };
 
-//assert array equal 
-function assertArraysEqual(array1, array2) {
+//assert array equal
+const assertArraysEqual = function(array1, array2) {
   let result = "";
   //judge length and if length is the same test each element against each element
   if (array1.length === array2.length) {
