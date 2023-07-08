@@ -1,4 +1,3 @@
-//use Array.isArray() to compare arrays
 
 //eqArrays
 const eqArrays = function(array1, array2) {
