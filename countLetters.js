@@ -41,7 +41,7 @@ const assertEqual = function(actual, expected) {
 
 //export function
 
-module.exports = assertEqual;
+module.exports = countLetters;
 
 //put in tests here
 
