@@ -53,10 +53,12 @@ const flatten = function(arrayToFlatten) {
 };
 
 //console.log(flatten([1, 2, [3, 4], 5, [6]])); //this one works,
-//console.log(flatten([[1, 3, 5], [7, 9, 11]])); //only returning numbers from teh first array
-console.log(eqArrays([1, 2, 3, 4, 5, 6], flatten([1, 2, [3, 4], 5, [6]])));//should evaluate true
-console.log(eqArrays([1, 2, 3, 4, 5, 6], flatten([[1, 3, 5], [7, 9, 11]])));//should evaluate false
-console.log(eqArrays([1, 3, 5, 7, 9, 11], flatten([[1, 3, 5], [7, 9, 11]])));//should evalute true
+// //console.log(flatten([[1, 3, 5], [7, 9, 11]])); //only returning numbers from teh first array
+// console.log(eqArrays([1, 2, 3, 4, 5, 6], flatten([1, 2, [3, 4], 5, [6]])));//should evaluate true
+// console.log(eqArrays([1, 2, 3, 4, 5, 6], flatten([[1, 3, 5], [7, 9, 11]])));//should evaluate false
+// console.log(eqArrays([1, 3, 5, 7, 9, 11], flatten([[1, 3, 5], [7, 9, 11]])));//should evalute true
+
+module.exports = flatten
 
 
 

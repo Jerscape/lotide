@@ -47,6 +47,8 @@ const testObject = {
 
 //test cases
 
-let testCase1 = findKeyByValue(testObject, "The Wire");
+// let testCase1 = findKeyByValue(testObject, "The Wire");
 
-assertEqual(testCase1, "drama");
+// assertEqual(testCase1, "drama");
+
+module.exports = findKeyByValue

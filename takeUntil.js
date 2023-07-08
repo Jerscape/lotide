@@ -17,5 +17,7 @@ const takeUntil = function(array, callback) {
 
 
 //const result = takeUntil(fivesData, item => item === 10) //x => x <= will return true when x hits or equals 25 so your call will be takeUntil(fivesData, true)
-const result = takeUntil(fivesData, x => x === 15);
-console.log(result);
+// const result = takeUntil(fivesData, x => x === 15);
+// console.log(result);
+
+module.exports = takeUntil

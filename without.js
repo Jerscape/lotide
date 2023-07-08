@@ -1,4 +1,6 @@
 //eqArrays function (returns true or false)
+
+
 function eqArrays(array1, array2) {
 
   //judge length
@@ -56,14 +58,22 @@ const without = function(sourceArray, removalArray) {
 
 //test cases
 
-let result1 = without([14, 14, 3, 7, 9, 14],[14]);
-let result2 = without([10, 14, 10, 7, 9, 14],[10, 7]);
-let result3 = without(["Apple", "Kiwi", "Banana", "Orange", "Lychee"], ["Kiwi", "Lychee"]);
-let result4 = without(["Apple", "Kiwi", "Banana", "Orange", 10, 25], ["Kiwi", "Lychee", 10]);
+// let result1 = without([14, 14, 3, 7, 9, 14],[14]);
+// let result2 = without([10, 14, 10, 7, 9, 14],[10, 7]);
+// let result3 = without(["Apple", "Kiwi", "Banana", "Orange", "Lychee"], ["Kiwi", "Lychee"]);
+// let result4 = without(["Apple", "Kiwi", "Banana", "Orange", 10, 25], ["Kiwi", "Lychee", 10]);
 
-console.log(eqArrays([3, 7, 9], result1));
-console.log(eqArrays([14, 9, 14], result2));
-console.log(eqArrays(["Apple", "Banana", "Orange"], result3));
-console.log(eqArrays(["Apple", "Banana", "Orange", 25], result4));
-console.log("Should evaluate false: ");
-console.log(eqArrays([14, 9, 14], result4));
+// console.log(eqArrays([3, 7, 9], result1));
+// console.log(eqArrays([14, 9, 14], result2));
+// console.log(eqArrays(["Apple", "Banana", "Orange"], result3));
+// console.log(eqArrays(["Apple", "Banana", "Orange", 25], result4));
+// console.log("Should evaluate false: ");
+// console.log(eqArrays([14, 9, 14], result4));
+
+// console.log(without([14, 14, 3, 7, 9, 14],[14]))
+// console.log(without([10, 14, 10, 7, 9, 14],[10, 7]))
+// console.log(without(["Apple", "Kiwi", "Banana", "Orange", "Lychee"], ["Kiwi", "Lychee"]))
+// console.log(without(["Apple", "Kiwi", "Banana", "Orange", 10, 25], ["Kiwi", "Lychee", 10]))
+
+
+module.exports = without
