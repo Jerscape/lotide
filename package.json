@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@jeremydutton/lotide",
   "version": "1.0.0",
-  "description": "For lotide testing",
-  "main": "assertArraysEqual.js",
+  "description": "Lotide project for module 1 lighthouse web-flex bootcamp",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
