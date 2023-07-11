@@ -1,4 +1,5 @@
 
+//accepts an array and returns the tail of the array
 const tail = function(array) {
   let result = [];
   for (let i = 0; i < array.length; i++) {
@@ -9,6 +10,7 @@ const tail = function(array) {
 
   }
 
+  //returns array with tail of array
   return result;
 };
 
