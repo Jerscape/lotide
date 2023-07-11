@@ -6,8 +6,7 @@ const assertObjectsEqual = require('./assertObjectsEqual');
 const eqArrays = require('./eqArrays');
 const eqObects = require('./eqObjects');
 
-//regular
-
+//main utliities
 const countLetters = require('./countLetters');
 const countOnly = require('./countOnly');
 const findKey = require('./findKey');
@@ -21,15 +20,17 @@ const tail = require('./tail');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
 
-//export
+//export 
 module.exports = {
 
+  //assertions and testing
   assertArraysEqual,
   assertEqual,
   assertObjectsEqual,
   eqArrays,
   eqObects,
 
+  //main utlities
   head,
   tail,
   middle,
@@ -42,25 +43,5 @@ module.exports = {
   map,
   takeUntil,
   without,
-
-    
-  // assertArraysEqual: assertArraysEqual,
-  // assertEqual: assertEqual,
-  // assertObjectsEqual: assertObjectsEqual,
-  // eqArrays: eqArrays,
-  // eqObects: eqObects,
-
-  // head: head,
-  // tail: tail,
-  // middle: middle,
-  // countLetters: countLetters,
-  // countOnly: countOnly,
-  // findKey: findKey,
-  // findKeyByValue: findKeyByValue,
-  // flatten: flatten,
-  // letterPositions: letterPositions,
-  // map: map,
-  // takeUntil: takeUntil,
-  // without: without
 
 };
