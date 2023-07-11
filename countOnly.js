@@ -1,5 +1,4 @@
-//imports
-const assertEqual = require('./assertEqual');
+
 
 //countOnly function takes in two arguments. 1) an array and 2) items to count in that array
 const countOnly = function(allItems, itemsToCount) {

@@ -1,6 +1,5 @@
 const assert = require('chai').assert
 const middle = require('../middle')
-const assertArraysEqual = require('../assertArraysEqual')
 const eqArrays = require('../eqArrays')
 
 //mentor bryan gomes - use the eqArrays

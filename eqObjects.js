@@ -1,9 +1,8 @@
-const assertEqual = require('./assertEqual');
+//imports
 const eqArrays = require('./eqArrays');
 
 
 //EQOBJECTS FUNCTION
-
 const eqObjects = function(object1, object2) {
 
   let object1KeysArr = Object.keys(object1);
@@ -35,7 +34,7 @@ const eqObjects = function(object1, object2) {
         }
 
       } else {
-        //if keys don't match
+       
         return false;
       }
 
