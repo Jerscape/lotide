@@ -1,8 +1,9 @@
+//imports
 const assertEqual = require('./assertEqual');
 
 
-//find key function
-
+//find key function accepts object, and callback function which evaluates for truthiness
+//it returns the first key for which the callback returns a truthy value
 const findKey = function(object, callback) {
 
   for (let key in object) {
@@ -13,15 +14,14 @@ const findKey = function(object, callback) {
       return key;
     }
     
-
     
-  }//end first for of
+  }
 
-}; //end function
+}; 
 
 
-//testing
-// const bloop = findKey({
+//This testing demonstrates an example of the use of the callback
+// const result = findKey({
 //   "Blue Hill": { stars: 1 },
 //   "Akaleri":   { stars: 3 },
 //   "noma":      { stars: 2 },
@@ -29,6 +29,7 @@ const findKey = function(object, callback) {
 //   "Ora":       { stars: 4 },
 //   "Akelarre":  { stars: 3 }
 // }, x => x.stars === 45); // => "noma"
-// console.log(bloop);
+// console.log(result);
 
+//exports
 module.exports = findKey;
