@@ -1,5 +1,5 @@
 
-
+//middle function
 function middle(array) {
   let alength = array.length;
   let middle = [];
@@ -11,7 +11,6 @@ function middle(array) {
       let div = (alength - 1) / 2;
       middle.push(array[div]);
 
-      //presumably this should be only even arrays
     } else {
       let div = alength / 2;
       middle.push(array[div - 1], array[div]);
@@ -22,6 +21,7 @@ function middle(array) {
   return middle;
 }
 
+//exports
 module.exports = middle;
 
 

@@ -3,7 +3,7 @@ const middle = require('../middle')
 const assertArraysEqual = require('../assertArraysEqual')
 const eqArrays = require('../eqArrays')
 
-//bryan gomes - use the eqArrays
+//mentor bryan gomes - use the eqArrays
 
 const result1 = middle(["Blur", "Oasis", "Pulp", "Radiohead", "James"])
 const result2 = middle(['Blur','Pulp','Radiohead', 'James'])
