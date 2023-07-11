@@ -1,6 +1,6 @@
 {
   "name": "@jeremydutton/lotide",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Lotide project for module 1 lighthouse web-flex bootcamp",
   "main": "index.js",
   "directories": {
