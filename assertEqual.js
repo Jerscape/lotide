@@ -1,3 +1,4 @@
+//assert equal compares two primative data types for equality
 const assertEqual = function(actual, expected) {
   let message = "";
   if (actual === expected) {
@@ -6,11 +7,11 @@ const assertEqual = function(actual, expected) {
     message = `Assertion Failed: ${actual} != ${expected}`;
   }
 
+  //logs assertion message
   console.log(message);
 };
 
-//export function
-
+//exports
 module.exports = assertEqual;
 
 
