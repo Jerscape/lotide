@@ -1,5 +1,5 @@
 
-//middle function
+//middle function, accepts an array and returns the middle element for a odd numbered array and the two middle elements for an even numbered array
 function middle(array) {
   let alength = array.length;
   let middle = [];
@@ -21,7 +21,7 @@ function middle(array) {
   return middle;
 }
 
-//exports
+//export middle function
 module.exports = middle;
 
 

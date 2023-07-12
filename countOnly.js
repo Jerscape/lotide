@@ -27,4 +27,4 @@ const countOnly = function(allItems, itemsToCount) {
 
 
 //export function
-module.exports = countOnly
+module.exports = countOnly;

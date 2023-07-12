@@ -1,5 +1,5 @@
 
-//take until accets array,and callback function. It returns a slice at the front of the array
+//take until accepts array,and callback function. It returns a slice at the front of the array
 //stopping at the first truthy value returned by the callback
 const takeUntil = function(array, callback) {
   let result = [];
@@ -21,4 +21,4 @@ const takeUntil = function(array, callback) {
 // console.log(result);
 
 //export function
-module.exports = takeUntil
+module.exports = takeUntil;

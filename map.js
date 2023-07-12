@@ -16,4 +16,4 @@ const map = function(array, callback) {
 };
 
 //export function
-module.exports = map
+module.exports = map;

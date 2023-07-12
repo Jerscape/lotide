@@ -21,6 +21,6 @@ let eqArrays = function(array1, array2) {
   return true;
 };
 
-//exports
+//export function
 module.exports = eqArrays;
 

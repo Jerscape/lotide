@@ -19,4 +19,4 @@ const findKeyByValue = function(object, value) {
 
 
 //export function
-module.exports = findKeyByValue
+module.exports = findKeyByValue;

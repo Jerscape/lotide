@@ -15,7 +15,7 @@ const tail = function(array) {
 };
 
 //exporting tail function
-module.exports = tail
+module.exports = tail;
 
 
 

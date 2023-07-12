@@ -48,7 +48,7 @@ const eqObjects = function(object1, object2) {
   } 
 
   return true;
-}; // end function
+}; 
 
-
-module.exports = eqObjects
+//export function
+module.exports = eqObjects;

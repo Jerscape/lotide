@@ -15,5 +15,5 @@ const without = function(sourceArray, removalArray) {
   return result;
 };
 
-//exports
+//export function
 module.exports = without
